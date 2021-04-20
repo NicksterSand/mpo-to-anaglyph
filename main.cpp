@@ -53,7 +53,7 @@ int main(int argc, char *argv[]){
 		for(unsigned char* p1 = img1, *p2 = img2, *a = anaglyph; p1 != img1 + imgsize; p1 += n1, p2 += n2, a += n1){
 			*a = (uint8_t)(*p1);
 			*(a+1) = (uint8_t)(*(p2 + 1));
-			*(a+2) = (uint8_t)(*(p2 + 1));
+			*(a+2) = (uint8_t)(*(p2 + 2));
 		}
 
 		stbi_write_jpg("Anaglyph.jpg", x1, y1, n1, anaglyph, 100);	
